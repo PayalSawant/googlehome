@@ -5,9 +5,9 @@
   "engines": {
     "node": "10.x"
   },
-  "main": "googleapi.js",
+  "main": "index.js",
   "scripts": {
-    "start": "set NODE_ENV=dev && node googleapi.js",
+    "start": "set NODE_ENV=dev && node index.js",
     "test": "node test.js"
   },
   "dependencies": {
