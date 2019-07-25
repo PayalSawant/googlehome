@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <title>Node Authentication</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+    <style>
+        body        { padding-top:80px; }
+        input {
+          width: 80%;
+              padding: 1px 0px;
+              margin: 0px 0;
+              box-sizing: inherit;
+              border: 1px solid chartreuse;
+              border-radius: 1px;
+              height: 30px;
+          flex: 0 0 200px;
+          margin-left: 10px;
+        }
+    </style>
+    <script type="text/javascript">
+    var form = document.getElementById('textform');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      });
+    </script>
+</head>
+<body>
+<div class="container">
+
+    <div class="jumbotron text-center">
+        <h1><span class="fa fa-lock"></span> Google Home</h1>
+
+        <form action="/" id="textform" method="post" autocomplete="off">
+          <table border="0" style="background-color: #eae2ec9e;" align="center" padding="0" width="100%">
+            <tr>
+              <td><label for="login">Username</label></td>
+              <td><input type="text"  style="background-color: #161f1b03;" name="login" id="login"
+                disabled value="<%= mail %>" /></td>
+            </tr>
+            <tr>
+              <td><label for="pass">Password</label></td>
+              <td><input type="password"  name="pass" id="pass" /></td>
+            </tr>
+            <tr>
+              <td><label for="login">Type audio message</label></td>
+              <td><input type="text" name="textMessage" id="textMessage"/></td>
+            </tr>
+            <tr >
+              <td colspan="2" align="center">
+                <input class="btn btn-danger" style="width:10%" type="submit" value="Submit"></input>
+              </td>
+            </tr>
+          </table>
+        </form>
+    </div>
+
+</div>
+</body>
+</html>
