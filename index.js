@@ -67,12 +67,12 @@ app.get('/google-auth', async function(req, res) {
 
                 let code=queryString.parseUrl(req.url).query.code;
                 try{
-                      // const {tokens} = await(oauth2Client.getToken(code));
-                      // oauth2Client.setCredentials(tokens);
-                      // const plus = google.plus({ version: 'v1', oauth2Client });
-                      // const me = await(plus.people.get({ userId: 'me' }));
-                      // const userEmail = me.data.emails[0].value;
-                    const Useremail = 'munjewar.payal@gmail.com';
+                      const {tokens} = await(oauth2Client.getToken(code));
+                      oauth2Client.setCredentials(tokens);
+                      const plus = google.plus({ version: 'v1', oauth2Client });
+                      const me = await(plus.people.get({ userId: 'me' }));
+                      const Useremail = me.data.emails[0].value;
+                  
                       console.log(Useremail);
                     if(checkEmail(Useremail) == true)
                      {
